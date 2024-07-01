@@ -2,6 +2,10 @@ import React from "react";
 import { Progress, Typography } from "@material-tailwind/react";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
+import profile from '../assets/images/Profile.png'
+
+
+
 const AboutComponent = () => {
   const dark = localStorage.getItem("theme");
   return (
@@ -13,17 +17,19 @@ const AboutComponent = () => {
           <div className="col-span-12 md:col-span-4">
             <div className="flex justify-center">
               <div className="relative flex justify-center ">
-                <img src="https://amitjs.com/assets/images/show/ProfileImage.png" alt="" />
+              
+                {/* <img src="https://amitjs.com/assets/images/show/ProfileImage.png" alt="" /> */}
                 
-              {/* <img src="https://avatars.githubusercontent.com/u/89535239?v=4" alt="" />  */}
+              <img  src={profile} alt="" /> 
                 
-                <img
+
+                {/* <img
                   src="https://amitjs.com/assets/images/show/underline.svg"
                   alt=""
                   className="absolute bottom-[-20px]"
-                />
+                /> */}
 
-                <img
+                {/* <img
                   src={
                     dark === "dark"
                       ? "https://amitjs.com/assets/images/icon/AlexJohan.svg"
@@ -31,7 +37,9 @@ const AboutComponent = () => {
                   }
                   alt=""
                   className="absolute bottom-[0px]"
-                />
+                /> */}
+
+
               </div>
             </div>
           </div>
