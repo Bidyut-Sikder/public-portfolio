@@ -120,7 +120,7 @@ const HomeComponent = () => {
                       {({ isVisible }) =>
                         isVisible && (
                           <>
-                            <CountUp delay={0} start={0} end={6} />+
+                            <CountUp delay={0} start={0} end={3} />+
                           </>
                         )
                       }
@@ -136,7 +136,7 @@ const HomeComponent = () => {
                       {({ isVisible }) =>
                         isVisible && (
                           <>
-                            <CountUp delay={0} start={0} end={635} />+
+                            <CountUp delay={0} start={0} end={35} />+
                           </>
                         )
                       }
@@ -164,9 +164,10 @@ const HomeComponent = () => {
                         className="transition-all duration-300 hover:scale-[110%]"
                       />
                     </Link>
-
-                    <p>
-                      Full e-commerce solution with google authentication and more.
+                    <h1 className="text-xl p-1">E-Commerce</h1>
+                    <p className="text-lg p-1">
+                      Full e-commerce solution with google authentication and
+                      more.
                     </p>
                   </div>
                 </div>

@@ -2,6 +2,10 @@ import React from "react";
 import { useRef } from "react";
 // import { messageCreate__Request__API } from "../Api/Api";
 import { SuccessTost } from "../Helpers/FormHelper";
+import emailjs from '@emailjs/browser';
+
+
+
 
 const ContactComponent = () => {
   let fullNameRef,
@@ -15,17 +19,48 @@ const ContactComponent = () => {
     let email = emailRef.value;
     let website = websiteRef.value;
     let message = messageRef.value;
-    messageCreate__Request__API(fullName, email, website, message).then(
-      (res) => {
-        if (res === true) {
-          fullNameRef.value = "";
-          emailRef.value = "";
-          websiteRef.value = "";
-          messageRef.value = "";
-          SuccessTost("Message send successful!");
+
+    const YOUR_SERVICE_ID = "service_8yly24d";
+    const YOUR_TEMPLATE_ID = "template_kepf33p";
+    const YOUR_PUBLIC_KEY = "lE7lQ9QlyJ5B4qION";
+    const formData = {
+      from_name: fullName,
+      from_email: email,
+      to_name: "Bidyut Sikder",
+      website: website,
+      message: message,
+    };
+
+    emailjs
+      .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, {
+        publicKey: YOUR_PUBLIC_KEY,
+      })
+      .then(
+        (res) => {
+          console.log("SUCCESS!", res);
+          toast.success("Your Message has been sent successfully");
+
+          fullName: "";
+          email: "";
+          message: "";
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Failed to send your message. Please try again later");
         }
-      }
-    );
+      );
+
+    // messageCreate__Request__API(fullName, email, website, message).then(
+    //   (res) => {
+    //     if (res === true) {
+    //       fullNameRef.value = "";
+    //       emailRef.value = "";
+    //       websiteRef.value = "";
+    //       messageRef.value = "";
+    //       SuccessTost("Message send successful!");
+    //     }
+    //   }
+    // );
   };
 
   return (
