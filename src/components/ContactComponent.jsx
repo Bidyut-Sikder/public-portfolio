@@ -122,10 +122,12 @@ const ContactComponent = () => {
       <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
         <div className="contact-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29487.110529660204!2d91.78233825630927!3d22.50835433721081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd66e0fc1fe75%3A0x1a5fa83776c97924!2sHathazari!5e0!3m2!1sen!2sbd!4v1689738975067!5m2!1sen!2sbd"
-            height={470}
             width={"100%"}
-          />
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58762.28736611795!2d89.77806332577585!3d23.00015318141063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ffc29c3b07af57%3A0x1b95b14d7eebbcd1!2sGopalganj!5e0!3m2!1sen!2sbd!4v1732084515576!5m2!1sen!2sbd"
+            height={470}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       {/* contact info */}
@@ -140,7 +142,6 @@ const ContactComponent = () => {
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
               +88 01733 463493
             </p>
-          
           </div>
           <div>
             <p className="text-[14px] text-text">Home Address</p>
