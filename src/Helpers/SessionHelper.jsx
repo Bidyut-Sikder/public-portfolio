@@ -56,13 +56,13 @@ class SessionHelper {
                 <div className="flex-shrink-0 pt-0.5">
                   <img
                     className="h-auto w-10 rounded-full"
-                    src="https://amitjs.com/assets/images/show/ProfileImage.png"
+                    src="https://avatars.githubusercontent.com/u/89535239?v=4"
                     alt=""
                   />
                 </div>
                 <div className="ml-3 flex-1">
                   <p className="text-[16px] font-semibold text-btn">
-                    Hi, This is Bidyut
+                    Hi, This is Bidyut Sikder
                   </p>
                   <p className="mt-1 text-sm text-gray-500">
                     For the best view performance, we switch to the dark
@@ -100,13 +100,13 @@ class SessionHelper {
                 <div className="flex-shrink-0 pt-0.5">
                   <img
                     className="h-auto w-10 rounded-full"
-                    src="https://amitjs.com/assets/images/show/ProfileImage.png"
+                    src="https://avatars.githubusercontent.com/u/89535239?v=4"
                     alt=""
                   />
                 </div>
                 <div className="ml-3 flex-1">
                   <p className="text-[16px] font-semibold text-btn">
-                    Hi, This is Bidyut
+                    Hi, This is Bidyut Sikder
                   </p>
                   <p className="mt-1 text-sm text-gray-500">
                     Please Contact With Me! <br /> If you want to download my CV
