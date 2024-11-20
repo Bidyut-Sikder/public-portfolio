@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import FullScreenLoader from "../layout/FullScreenLoader";
 import MasterLayout from "../layout/MasterLayout";
+
 const HomeComponent = React.lazy(() => import("../components/HomeComponent"));
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
             <title>Home || Web Application Specialist</title>
             <meta
               name="description"
-              content="amitjs || Web Application Specialist"
+              content="bidyutsikder || Web Application Specialist"
             />
           </Helmet>
           <HomeComponent />

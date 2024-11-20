@@ -43,6 +43,7 @@ const MasterLayout = (props) => {
   //https://avatars.githubusercontent.com/u/89535239?v=4
   return (
     <>
+
       <div className={dark === "dark" ? "dark" : "bg-bodyWhite"}>
         {/* Header Section */}
         <header>
@@ -59,7 +60,6 @@ const MasterLayout = (props) => {
                     }
                     alt=""
                   /> */}
-
 
                   <img
                     src={
@@ -106,7 +106,7 @@ const MasterLayout = (props) => {
                       }
                       to={"/about"}
                     >
-                      About Us
+                      About Me
                     </NavLink>
                   </li>
                   <li className="w-[100px]">
@@ -207,7 +207,7 @@ const MasterLayout = (props) => {
                     }
                     to={"/about"}
                   >
-                    About Us
+                    About Me
                   </NavLink>
                 </li>
                 <li className=" text-[18px] font-semibold">
@@ -273,6 +273,7 @@ const MasterLayout = (props) => {
               </ul>
             </nav>
             {/* <div className="my-[30px] border-t border-[#ddd] dark:border-btn"></div> */}
+           
             <button
               onClick={darkControl}
               className="my-[30px] inline-block cursor-pointer"
@@ -298,31 +299,31 @@ const MasterLayout = (props) => {
 
                 <div className="mt-[20px] flex gap-3">
                   <Link
-                    to={"https://www.facebook.com/amitbiswas1994"}
+                    to={"https://web.facebook.com/bidyut.sikder.104696"}
                     target="_blank"
                   >
                     <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                       <FaFacebookF />
                     </button>
                   </Link>
-                  <Link to={"https://github.com/amitbd599"} target="_blank">
+                  <Link to={"https://github.com/Bidyut-Sikder"} target="_blank">
                     <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                       <FaGithub />
                     </button>
                   </Link>
                   <Link
-                    to={"https://www.linkedin.com/in/amitbiswas-tm/"}
+                    to={"https://www.linkedin.com/in/bidyutsikder/"}
                     target="_blank"
                   >
                     <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                       <FaLinkedinIn />
                     </button>
                   </Link>
-                  <Link to={"https://medium.com/@amitbd599"} target="_blank">
+                  {/* <Link to={"https://medium.com/@amitbd599"} target="_blank">
                     <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                       <FaMedium />
                     </button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -366,37 +367,37 @@ const MasterLayout = (props) => {
                           </p>
                           <div className="mt-[30px] flex justify-center gap-3">
                             <Link
-                              to={"https://www.facebook.com/amitbiswas1994"}
+                              to={"https://web.facebook.com/bidyut.sikder.104696"}
                               target="_blank"
                             >
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button title="Facebook" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                                 <FaFacebookF />
                               </button>
                             </Link>
                             <Link
-                              to={"https://github.com/amitbd599"}
+                              to={"https://github.com/Bidyut-Sikder"}
                               target="_blank"
                             >
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button title="Github" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                                 <FaGithub />
                               </button>
                             </Link>
                             <Link
-                              to={"https://www.linkedin.com/in/amitbiswas-tm/"}
+                              to={"https://www.linkedin.com/in/bidyutsikder/"}
                               target="_blank"
                             >
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button title="Linkedin" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                                 <FaLinkedinIn />
                               </button>
                             </Link>
-                            <Link
+                            {/* <Link
                               to={"https://medium.com/@amitbd599/"}
                               target="_blank"
                             >
                               <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
                                 <FaMedium />
                               </button>
-                            </Link>
+                            </Link> */}
                           </div>
                           <div className="mt-[30px]">
                             <Link
@@ -426,7 +427,11 @@ const MasterLayout = (props) => {
               <div className="col-span-12 lg:col-span-9 lg:ml-[30px]">
                 <div className="main__body">
                   {
-                    props.children}</div>
+                    props.children
+                    
+                    }
+                    
+                    </div>
               </div>
             </div>
           </div>

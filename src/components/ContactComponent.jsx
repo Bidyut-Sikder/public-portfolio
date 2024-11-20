@@ -31,7 +31,7 @@ const ContactComponent = () => {
   return (
     <section className=" mt-[60px] ">
       {/* contact Intro */}
-    <div className="rounded-xl bg-white p-[30px] dark:bg-card">
+      <div className="rounded-xl bg-white p-[30px] dark:bg-card">
         <div>
           <h1 className="text-[42px] leading-[52px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
             Let’s Chat<span className="text-theme">!</span>
@@ -115,7 +115,7 @@ const ContactComponent = () => {
             </div>
           </div>
         </div>
-      </div> 
+      </div>
 
       {/* Map section */}
 
@@ -127,11 +127,10 @@ const ContactComponent = () => {
             width={"100%"}
           />
         </div>
-      </div> 
+      </div>
       {/* contact info */}
 
-
-     <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
+      <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
         <h2 className="text-[24px] text-btn dark:text-white">
           Request a quote for work
         </h2>
@@ -139,27 +138,24 @@ const ContactComponent = () => {
           <div>
             <p className="text-[14px] text-text">Call for help</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              +88 01814 331350
+              +88 01733 463493
             </p>
-            <p className="mt-[2px] text-[16px] font-medium text-btn dark:text-white">
-              +88 01614 331350
-            </p>
+          
           </div>
           <div>
             <p className="text-[14px] text-text">Home Address</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              Hathazari (4330), Chattogram, <br /> Bangladesh.
+              Tungipara, Gopalgonj, <br /> Bangladesh.
             </p>
           </div>
           <div>
             <p className="text-[14px] text-text">Email address</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              amitbd599@gmail.com
+              bidyutsikder2001@gmail.com
             </p>
-            <p className="mt-[2px] text-[16px] font-medium">info@company.com</p>
           </div>
         </div>
-      </div> 
+      </div>
     </section>
   );
 };

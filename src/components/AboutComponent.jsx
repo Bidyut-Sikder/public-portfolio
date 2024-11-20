@@ -2,9 +2,7 @@ import React from "react";
 import { Progress, Typography } from "@material-tailwind/react";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
-import profile from '../assets/images/Profile.png'
-
-
+import profile from "../assets/images/Profile.png";
 
 const AboutComponent = () => {
   const dark = localStorage.getItem("theme");
@@ -17,11 +15,9 @@ const AboutComponent = () => {
           <div className="col-span-12 md:col-span-4">
             <div className="flex justify-center">
               <div className="relative flex justify-center ">
-              
                 {/* <img src="https://amitjs.com/assets/images/show/ProfileImage.png" alt="" /> */}
-                
-              <img  src={profile} alt="" /> 
-                
+
+                <img src={profile} alt="" />
 
                 {/* <img
                   src="https://amitjs.com/assets/images/show/underline.svg"
@@ -38,26 +34,40 @@ const AboutComponent = () => {
                   alt=""
                   className="absolute bottom-[0px]"
                 /> */}
-
-
               </div>
             </div>
           </div>
-        
 
-           <div className="col-span-12 md:col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <div className="mt-[60px] md:mt-0">
               <h1 className="text-[42px] leading-[52px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
                 About Me<span className="text-theme">!</span>
               </h1>
               <p className="text-[14px] text-text">
-                My favorite in this programming sector is to fix ‍any Errors.
+                My expertise includes{" "}
+                <b>
+                  <mark>Full-Stack</mark>
+                </b>{" "}
+                development using the{" "}
+                <b>
+                  <mark>MERN </mark>
+                </b>
+                stack, database management with MongoDB and MySQL, and deploying
+                efficient solutions with{" "}
+                <b>
+                  <mark>Expo and React Native</mark>
+                </b>
+                . I also have experience integrating tools like convex and
+                working with various development environments, including Linux
+                and Ubuntu. Additionally, I'm continuously learning, currently
+                focusing on Angular, DSA with JavaScript.
+                {/* My favorite in this programming sector is to fix ‍any Errors.
                 Because in every error there is hope to learn something new. I
                 won't quit until I can fix the error. In this programming life,
                 I have tried to solve all kinds of problems and have succeeded.
                 My policy is to stick with it until the problem is solved.
                 Contact us today, and let's bring your vision to life with the
-                power of Full stack development.
+                power of Full stack development. */}
               </p>
               <div className="mt-[25px] gap-[30px] md:flex">
                 <div className="flex items-center gap-[20px]">
@@ -66,7 +76,7 @@ const AboutComponent = () => {
                       {({ isVisible }) =>
                         isVisible && (
                           <div className="w-[80px]">
-                            <CountUp delay={0} start={0} end={635} />+
+                            <CountUp delay={0} start={0} end={35} />+
                           </div>
                         )
                       }
@@ -83,7 +93,7 @@ const AboutComponent = () => {
                       {({ isVisible }) =>
                         isVisible && (
                           <div className="w-[60px]">
-                            <CountUp delay={0} start={0} end={78} />+
+                            <CountUp delay={0} start={0} end={14} />+
                           </div>
                         )
                       }
@@ -95,10 +105,7 @@ const AboutComponent = () => {
                 </div>
               </div>
             </div>
-          </div> 
-
-
-
+          </div>
         </div>
       </div>
 
@@ -112,18 +119,18 @@ const AboutComponent = () => {
               </h2>
               <div>
                 <div className="mt-[20px]">
-                  <p className="text-[14px] text-text">2023 - Present</p>
+                  <p className="text-[14px] text-text">2023 - 2024</p>
                   <p className="mt-[5px] text-[16px] font-semibold text-btn dark:text-white">
-                    Co Instructor (MERN || Next JS & Prisma)
+                    Open Source
                   </p>
-                  <p className="text-[12px] text-text">Ostad Limited</p>
+                  <p className="text-[12px] text-text"> Firecamp.dev</p>
                 </div>
                 <div className="mt-[20px]">
-                  <p className="text-[14px] text-text">2018 - 2023</p>
+                  <p className="text-[14px] text-text">2022 - present</p>
                   <p className="mt-[5px] text-[16px] font-semibold text-btn dark:text-white">
                     Full stack Web Developer (MERN)
                   </p>
-                  <p className="text-[12px] text-text">Go-Lang co (USA)</p>
+                  <p className="text-[12px] text-text"></p>
                 </div>
               </div>
             </div>
@@ -137,18 +144,18 @@ const AboutComponent = () => {
               </h2>
               <div>
                 <div className="mt-[20px]">
-                  <p className="text-[14px] text-text">2015 - Present</p>
+                  <p className="text-[14px] text-text">2021 - Present</p>
                   <p className="mt-[5px] text-[16px] font-semibold text-btn dark:text-white">
-                    Research on Software & Web Application
+                    Research on Native & Web Application
                   </p>
                   <p className="text-[12px] text-text">
-                    Learn With Rabbil Hasan || Udemy || Youtube
+                    Learn With CS50 || Udemy || Youtube
                   </p>
                 </div>
                 <div className="mt-[20px]">
-                  <p className="text-[14px] text-text">2012 - 2015</p>
+                  <p className="text-[14px] text-text">2019 - 2024</p>
                   <p className="mt-[5px] text-[16px] font-semibold text-btn dark:text-white">
-                    Bachelor of Business Studies (BBS)
+                    Bachelor of Science (BSC)
                   </p>
                   <p className="text-[12px] text-text">
                     National University, Bangladesh

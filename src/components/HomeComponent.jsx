@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
+import logo from "..//assets/images/LOGO.png";
+
 const HomeComponent = () => {
   const dark = localStorage.getItem("theme");
 
@@ -14,16 +16,36 @@ const HomeComponent = () => {
             <span className="dark:text-theme">Hi!</span> There I’m
           </p>
           <h2 className="mt-[20px] text-[50px] leading-[60px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
-            Professional <span className="text-theme">Web Application</span>{" "}
+            Professional{" "}
+            <span className="text-theme">
+              {/* Web Application */}
+              Full Stack Application
+            </span>{" "}
             <br /> Specialist
           </h2>
-          <p className="mt-[15px] text-text">
-            Full Stack Web Developer and Web Application specializing in
+
+          <p className="mt-[15px] text-text ">
+            I am a skilled web and mobile app developer with 3+ years of
+            experience. Proficient in{" "}
+            <b>
+              {" "}
+              <mark>
+                JavaScript, React, React Native, Expo, Next.js, and Node.js,
+              </mark>{" "}
+            </b>{" "}
+            I have a strong foundation in full-stack development, including{" "}
+            <b>
+              {" "}
+              <mark>MongoDB and MySQL</mark>
+            </b>
+            . My expertise extends to the MERN stack and creating scalable,
+            production-ready apps.
+            {/* Full Stack Web Developer and Web Application specializing in
             front-end and back-end development. Experienced with all stages of
             the development cycle for dynamic websites. Well versed in numerous
             programming languages JavaScript ES6 Nodejs, structured language
             HTML5 CSS3, open-source front-end JavaScript library ReactJS, NextJS
-            With MongoDB & MySql Database.
+            With MongoDB & MySql Database. */}
           </p>
         </div>
       </div>
@@ -32,37 +54,49 @@ const HomeComponent = () => {
       <div className="mt-[30px] ">
         <div className="grid grid-cols-12 gap-[30px]">
           <div className="col-span-12 md:col-span-5">
-            <div className="rounded-xl bg-white p-[30px] dark:bg-card">
-              <img
-                src={
-                  dark === "dark"
-                    ? "https://amitjs.com/assets/images/logo.svg "
-                    : "/assets/images/logo-dark.svg"
-                }
-                alt=""
-              />
-              <div className="mt-[20px]">
-                <p className="text-[14px] text-text dark:text-white">
-                  Want To Know More
-                </p>
-                <Link to={"/about"}>
+            <Link to={"/about"}>
+              <div className="rounded-xl bg-white p-[30px] dark:bg-card">
+                <img
+                  src={
+                    dark === "dark"
+                      ? logo //"https://amitjs.com/assets/images/logo.svg "
+                      : "/assets/images/logo-dark.svg"
+                  }
+                  alt=""
+                  ///////////////////////////////////////
+                />
+
+                <div className="mt-[20px]">
+                  <p className="text-[14px] text-text dark:text-white">
+                    Want To Know More
+                  </p>
+
                   <h3 className="mt-[5px] inline-block text-[26px] tracking-[6px] text-btn dark:text-white">
-                    About Us
+                    About Me
                   </h3>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
             <div>
               <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
                 <div className="flex gap-[20px]">
                   <span className="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none ">
-                    <img src="https://amitjs.com/assets/images/icon/react.png" alt="" />
+                    <img
+                      src="https://amitjs.com/assets/images/icon/react.png"
+                      alt=""
+                    />
                   </span>
                   <span className="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none">
-                    <img src="https://amitjs.com/assets/images/icon/nextjs.png" alt="" />
+                    <img
+                      src="https://amitjs.com/assets/images/icon/nextjs.png"
+                      alt=""
+                    />
                   </span>
                   <span className="boxShadow rounded-lg p-[20px] dark:bg-btn dark:shadow-none ">
-                    <img src="https://amitjs.com/assets/images/icon/js.png" alt="" />
+                    <img
+                      src="https://amitjs.com/assets/images/icon/js.png"
+                      alt=""
+                    />
                   </span>
                 </div>
 
@@ -120,11 +154,20 @@ const HomeComponent = () => {
               <div className="flex justify-center gap-[20px]">
                 <div className="overflow-hidden rounded-lg">
                   <div>
-                    <img
-                      src="https://amitjs.com/assets/images/show/image-1.png"
-                      alt=""
-                      className="transition-all duration-300 hover:scale-[110%]"
-                    />
+                    <Link
+                      target="_blank"
+                      to="https://front-ecommerce-chi-nine.vercel.app/"
+                    >
+                      <img
+                        src="https://amitjs.com/assets/images/show/image-1.png"
+                        alt=""
+                        className="transition-all duration-300 hover:scale-[110%]"
+                      />
+                    </Link>
+
+                    <p>
+                      Full e-commerce solution with google authentication and more.
+                    </p>
                   </div>
                 </div>
                 <div className="overflow-hidden rounded-lg">

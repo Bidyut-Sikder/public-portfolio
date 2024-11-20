@@ -17,7 +17,7 @@ const Projects = () => {
             <title>Project || Web Application Specialist</title>
             <meta
               name="description"
-              content="amitjs || Web Application Specialist"
+              content="bidyutsikder || Web Application Specialist"
             />
           </Helmet>
           <ProjectsComponent />
