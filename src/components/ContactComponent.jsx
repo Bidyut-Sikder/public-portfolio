@@ -21,7 +21,11 @@ const ContactComponent = () => {
     let email = emailRef.value;
     let website = websiteRef.value;
     let message = messageRef.value;
-
+    
+    //i used github environment and secrets to store emailjs service id, public key and template id
+    const YOUR_SERVICE_ID = process.env.YOUR_SERVICE_ID; // "service_8yly24d";
+    const YOUR_TEMPLATE_ID = process.env.YOUR_TEMPLATE_ID; // "template_kepf33p";
+    const YOUR_PUBLIC_KEY = process.env.YOUR_PUBLIC_KEY; // "lE7lQ9QlyJ5B4qION";
     if (!isValidEmail(email)) {
       toast.error("Invalid Email Address");
       return;

@@ -1,4 +1,4 @@
-name: Deploy Application
+name: email.js integration
 
 on:
   push:
