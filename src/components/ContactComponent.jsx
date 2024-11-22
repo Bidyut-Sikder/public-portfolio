@@ -21,20 +21,31 @@ const ContactComponent = () => {
     let email = emailRef.value;
     let website = websiteRef.value;
     let message = messageRef.value;
-    
+
     //i used github environment and secrets to store emailjs service id, public key and template id
-    const YOUR_SERVICE_ID = process.env.YOUR_SERVICE_ID; // "service_8yly24d";
-    const YOUR_TEMPLATE_ID = process.env.YOUR_TEMPLATE_ID; // "template_kepf33p";
-    const YOUR_PUBLIC_KEY = process.env.YOUR_PUBLIC_KEY; // "lE7lQ9QlyJ5B4qION";
+    const YOUR_SERVICE_ID = "service_8yly24d";
+    const YOUR_TEMPLATE_ID = "template_kepf33p";
+    const YOUR_PUBLIC_KEY = "lE7lQ9QlyJ5B4qION";
     if (!isValidEmail(email)) {
-      toast.error("Invalid Email Address");
+      const toastId = toast.error("Invalid Email Address");
+      setTimeout(() => {
+        toast.dismiss(toastId);
+      }, 3000);
       return;
     }
 
     if (!isValidWebsite(website)) {
-      toast.error("Invalid Website Address");
+      const toastId = toast.error("Invalid Website Address", {
+        autoClose: false,
+      });
+
+      // Dismiss after 3 seconds (or some condition)
+      setTimeout(() => {
+        toast.dismiss(toastId);
+      }, 3000);
       return;
     }
+
     const formData = {
       from_name: fullName,
       from_email: email,
@@ -51,8 +62,12 @@ const ContactComponent = () => {
         (res) => {
           setLoader(false);
           console.log("SUCCESS!", res);
-          toast.success("Your Message has been sent successfully");
-
+          const toastId = toast.success(
+            "Your Message has been sent successfully"
+          );
+          setTimeout(() => {
+            toast.dismiss(toastId);
+          }, 3000);
           fullNameRef.value = "";
           emailRef.value = "";
           websiteRef.value = "";
@@ -61,7 +76,13 @@ const ContactComponent = () => {
         (error) => {
           setLoader(false);
           console.log("FAILED...", error.text);
-          toast.error("Failed to send your message. Please try again later");
+          const toastId = toast.error(
+            "Failed to send your message. Please try again later"
+          );
+
+          setTimeout(() => {
+            toast.dismiss(toastId);
+          }, 3000);
         }
       );
 
