@@ -191,7 +191,7 @@ const AboutComponent = () => {
                       </Typography>
                     </div>
                     <Progress
-                      value={60}
+                      value={60} 
                       size="lg"
                       className="progress border border-theme/20 bg-theme/10 p-1"
                     />
