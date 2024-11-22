@@ -175,6 +175,28 @@ const AboutComponent = () => {
             <div>
               <div className="mt-[30px]">
                 <div>
+                  <div className="mt-[20px] w-full mb-[20px] ">
+                    <div className="mb-2 flex items-center justify-between gap-4">
+                      <Typography
+                        className="text-[16px] font-medium text-btn dark:text-white"
+                        variant="p"
+                      >
+                        Expo
+                      </Typography>
+                      <Typography
+                        className="text-btn dark:text-white"
+                        variant="h6"
+                      >
+                        60%
+                      </Typography>
+                    </div>
+                    <Progress
+                      value={60}
+                      size="lg"
+                      className="progress border border-theme/20 bg-theme/10 p-1"
+                    />
+                  </div>
+
                   <div className="w-full">
                     <div className="mb-2 flex items-center justify-between gap-4">
                       <Typography
