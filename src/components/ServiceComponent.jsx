@@ -13,17 +13,24 @@ const ServiceComponent = () => {
             Our Best Service<span className="text-theme">!</span>
           </h1>
           <p className="text-[14px] text-text">
-            If you are ready to elevate your online presence and provide your
+            Are you ready to transform your online presence and create
+            unforgettable digital experiences for your users? Our expert web
+            design, development, and UX/UI services are crafted to align with
+            your unique vision and goals, delivering exceptional results every
+            step of the way. Let’s collaborate to build a website that not only
+            engages and converts but leaves a lasting impression on your
+            audience. Reach out to us today, and together, we’ll bring your
+            digital dreams to life.
+            {/* If you are ready to elevate your online presence and provide your
             users with a delightful digital journey, look no further. Our web
             design, Web Development, and UX design services are tailored to meet
             your specific needs and deliver outstanding results. Contact us
             today, and let's embark on a collaborative journey to create a
             website that captivates, converts, and makes a lasting impression on
-            your audience.
+            your audience. */}
           </p>
           <div className="mt-[60px]">
             <div className="grid grid-cols-12 md:gap-[30px]">
-            
               {/* {Service.map((item, index) => (
                 <div
                   className="col-span-12 mb-[40px] md:col-span-6 md:mb-0"
@@ -49,8 +56,6 @@ const ServiceComponent = () => {
                   </div>
                 </div>
               ))} */}
-
-
             </div>
           </div>
         </div>
@@ -65,7 +70,7 @@ const ServiceComponent = () => {
                 {({ isVisible }) =>
                   isVisible && (
                     <div className="w-[40px]">
-                      <CountUp delay={0} start={0} end={6} />+
+                      <CountUp delay={0} start={0} end={3} />+
                     </div>
                   )
                 }
@@ -83,7 +88,7 @@ const ServiceComponent = () => {
                 {({ isVisible }) =>
                   isVisible && (
                     <div className="w-[80px]">
-                      <CountUp delay={0} start={0} end={635} />+
+                      <CountUp delay={0} start={0} end={35} />+
                     </div>
                   )
                 }
@@ -102,7 +107,7 @@ const ServiceComponent = () => {
                 {({ isVisible }) =>
                   isVisible && (
                     <div className="w-[60px]">
-                      <CountUp delay={0} start={0} end={78} />+
+                      <CountUp delay={0} start={0} end={14} />+
                     </div>
                   )
                 }
@@ -122,7 +127,7 @@ const ServiceComponent = () => {
                 {({ isVisible }) =>
                   isVisible && (
                     <div className="w-[60px]">
-                      <CountUp delay={0} start={0} end={8} />
+                      <CountUp delay={0} start={0} end={4} />
                       K+
                     </div>
                   )
