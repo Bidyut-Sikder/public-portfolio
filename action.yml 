@@ -1,0 +1,24 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Build application
+        env:
+          YOUR_PUBLIC_KEY: ${{ secrets.YOUR_PUBLIC_KEY }}
+          YOUR_SERVICE_ID: ${{ secrets.YOUR_SERVICE_ID }}
+          YOUR_TEMPLATE_ID: ${{ secrets.YOUR_TEMPLATE_ID }}
+        run: |
+          echo "Building with Emailjs key and ids"
+          # Run your build or deploy command
+          npm run build

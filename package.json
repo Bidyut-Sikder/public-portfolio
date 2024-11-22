@@ -24,6 +24,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "carousel": "^0.0.3",
+    "clsx": "^2.1.1",
     "cogo-toast": "^4.2.3",
     "html-react-parser": "^5.0.11",
     "i": "^0.3.7",

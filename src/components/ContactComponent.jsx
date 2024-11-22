@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 // import { messageCreate__Request__API } from "../Api/Api";
 import { SuccessTost } from "../Helpers/FormHelper";
-import emailjs from '@emailjs/browser';
-
-
-
+import emailjs from "@emailjs/browser";
+import Spinner from "../ui/Spinner";
+import toast from "react-hot-toast";
+import { isValidEmail, isValidWebsite } from "../Helpers/utils";
 
 const ContactComponent = () => {
+  const [loader, setLoader] = useState(false);
+
   let fullNameRef,
     emailRef,
     websiteRef,
     messageRef = useRef();
 
   // Create Message
-  const getData = () => {
+  const getData = async () => {
     let fullName = fullNameRef.value;
     let email = emailRef.value;
     let website = websiteRef.value;
     let message = messageRef.value;
 
-    const YOUR_SERVICE_ID = "service_8yly24d";
-    const YOUR_TEMPLATE_ID = "template_kepf33p";
-    const YOUR_PUBLIC_KEY = "lE7lQ9QlyJ5B4qION";
+    if (!isValidEmail(email)) {
+      toast.error("Invalid Email Address");
+      return;
+    }
+
+    if (!isValidWebsite(website)) {
+      toast.error("Invalid Website Address");
+      return;
+    }
     const formData = {
       from_name: fullName,
       from_email: email,
@@ -30,21 +38,24 @@ const ContactComponent = () => {
       website: website,
       message: message,
     };
-
-    emailjs
+    setLoader(true);
+    const res = await emailjs
       .send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, {
         publicKey: YOUR_PUBLIC_KEY,
       })
       .then(
         (res) => {
+          setLoader(false);
           console.log("SUCCESS!", res);
           toast.success("Your Message has been sent successfully");
 
-          fullName: "";
-          email: "";
-          message: "";
+          fullNameRef.value = "";
+          emailRef.value = "";
+          websiteRef.value = "";
+          messageRef.value = "";
         },
         (error) => {
+          setLoader(false);
           console.log("FAILED...", error.text);
           toast.error("Failed to send your message. Please try again later");
         }
@@ -139,10 +150,11 @@ const ContactComponent = () => {
                   </div>
                   <div className="mb-[30px]">
                     <button
+                      disabled={loader && true}
                       onClick={getData}
                       className=" rounded-full border-2 border-theme bg-theme px-[30px] py-[10px] font-medium   text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme"
                     >
-                      Send Massage
+                      {loader ? "Loading.." : "Send Massage"}
                     </button>
                   </div>
                 </div>
