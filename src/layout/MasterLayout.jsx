@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import {
-
   FaFacebookF,
   FaGit,
   FaGithub,
@@ -16,16 +15,13 @@ import {
 import { ReactTyped } from "react-typed";
 import { cvToast } from "../Helpers/SessionHelper";
 
-import logo from '..//assets/images/LOGO.png'
+import logo from "..//assets/images/LOGO.png";
 
 const MasterLayout = (props) => {
-
-
   const [sidebar, setSidebar] = useState(false);
 
   const dark = localStorage.getItem("theme"); //"dark"
   // const dark = "dark"
-
 
   const darkControl = () => {
     if (localStorage.getItem("theme") === "dark") {
@@ -43,7 +39,6 @@ const MasterLayout = (props) => {
   //https://avatars.githubusercontent.com/u/89535239?v=4
   return (
     <>
-
       <div className={dark === "dark" ? "dark" : "bg-bodyWhite"}>
         {/* Header Section */}
         <header>
@@ -61,16 +56,7 @@ const MasterLayout = (props) => {
                     alt=""
                   /> */}
 
-                  <img
-                    src={
-                      dark === "dark"
-                        ? logo
-                        : logo
-                    }
-                    alt=""
-                  />
-
-
+                  <img src={dark === "dark" ? logo : logo} alt="" />
 
                   {/* <img
                     src={
@@ -80,7 +66,6 @@ const MasterLayout = (props) => {
                     }
                     alt=""
                   /> */}
-
                 </Link>
               </div>
               <menu className="hidden items-center md:flex">
@@ -142,7 +127,10 @@ const MasterLayout = (props) => {
                       <span className="text-theme dark:text-white">Light</span>
                     </p>
                     <div>
-                      <img src="https://amitjs.com/assets/images/icon/sun.svg" alt="" />
+                      <img
+                        src="https://amitjs.com/assets/images/icon/sun.svg"
+                        alt=""
+                      />
                     </div>
                   </button>
                   <button
@@ -273,7 +261,7 @@ const MasterLayout = (props) => {
               </ul>
             </nav>
             {/* <div className="my-[30px] border-t border-[#ddd] dark:border-btn"></div> */}
-           
+
             <button
               onClick={darkControl}
               className="my-[30px] inline-block cursor-pointer"
@@ -359,18 +347,23 @@ const MasterLayout = (props) => {
                           <p className="text-btn dark:text-white">
                             Software Developer
                           </p>
-                          <p className="mt-[25px] text-[14px] text-btn dark:text-white">
-                            bidyutsiker2001@gmail.com
+                          <p className="mt-[5px] text-[14px] text-btn dark:text-white">
+                            developerbidyut5@gmail.com
                           </p>
-                          <p className="mt-1 text-[14px] text-btn dark:text-white">
-                            +88 01733 463493
-                          </p>
-                          <div className="mt-[30px] flex justify-center gap-3">
+                          {/* <p className="mt-1 text-[14px] text-btn dark:text-white">
+                          number goes here
+                          </p> */}
+                          <div className="mt-[10px] flex justify-center gap-3">
                             <Link
-                              to={"https://web.facebook.com/bidyut.sikder.104696"}
+                              to={
+                                "https://web.facebook.com/bidyut.sikder.104696"
+                              }
                               target="_blank"
                             >
-                              <button title="Facebook" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button
+                                title="Facebook"
+                                className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme "
+                              >
                                 <FaFacebookF />
                               </button>
                             </Link>
@@ -378,7 +371,10 @@ const MasterLayout = (props) => {
                               to={"https://github.com/Bidyut-Sikder"}
                               target="_blank"
                             >
-                              <button title="Github" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button
+                                title="Github"
+                                className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme "
+                              >
                                 <FaGithub />
                               </button>
                             </Link>
@@ -386,7 +382,10 @@ const MasterLayout = (props) => {
                               to={"https://www.linkedin.com/in/bidyutsikder/"}
                               target="_blank"
                             >
-                              <button title="Linkedin" className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                              <button
+                                title="Linkedin"
+                                className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme "
+                              >
                                 <FaLinkedinIn />
                               </button>
                             </Link>
@@ -425,13 +424,7 @@ const MasterLayout = (props) => {
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-9 lg:ml-[30px]">
-                <div className="main__body">
-                  {
-                    props.children
-                    
-                    }
-                    
-                    </div>
+                <div className="main__body">{props.children}</div>
               </div>
             </div>
           </div>
@@ -442,19 +435,11 @@ const MasterLayout = (props) => {
           <div className="container mx-auto mt-[60px] flex justify-center pb-[40px]">
             <div>
               <p className="text-center text-text">
-                Copyright <span className="text-theme">bidyutsikder</span> ©2024. All
-                rights reserved
+                Copyright <span className="text-theme">bidyutsikder</span>{" "}
+                ©2024. All rights reserved
               </p>
               <div className="mt-[20px] flex justify-center text-center">
-                <img
-                  src={
-                    dark === "dark"
-                      ? logo
-                      : logo
-                  }
-                  alt=""
-                />
-
+                <img src={dark === "dark" ? logo : logo} alt="" />
 
                 {/* <img
                   src={
@@ -464,8 +449,6 @@ const MasterLayout = (props) => {
                   }
                   alt=""
                 /> */}
-
-
               </div>
             </div>
           </div>
@@ -477,16 +460,6 @@ const MasterLayout = (props) => {
 
 export default MasterLayout;
 
-
-
-
-
-
-
-
-
-
-
 // const MasterLayout = () => {
 //   return (
 //     <div>
@@ -496,14 +469,3 @@ export default MasterLayout;
 // };
 
 // export default MasterLayout;
-
-
-
-
-
-
-
-
-
-
-

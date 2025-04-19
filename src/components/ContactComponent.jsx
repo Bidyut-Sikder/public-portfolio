@@ -209,22 +209,22 @@ const ContactComponent = () => {
           Request a quote for work
         </h2>
         <div className="mt-[20px] grid gap-[30px] xl:flex xl:gap-[60px]">
-          <div>
+          {/* <div>
             <p className="text-[14px] text-text">Call for help</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              +88 01733 463493
+              number goes here
             </p>
-          </div>
+          </div> */}
           <div>
             <p className="text-[14px] text-text">Home Address</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              Tungipara, Gopalgonj, <br /> Bangladesh.
+              Gopalgonj, Bangladesh.
             </p>
           </div>
           <div>
             <p className="text-[14px] text-text">Email address</p>
             <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-              bidyutsikder2001@gmail.com
+            developerbidyut5@gmail.com
             </p>
           </div>
         </div>

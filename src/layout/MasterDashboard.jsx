@@ -271,7 +271,8 @@ const MasterDashboard = (props) => {
                           <ListItemPrefix>
                             <PowerIcon className="h-5 w-5" />
                           </ListItemPrefix>
-                          Logout
+                          Logout  
+                          
                         </button>
                       </div>
                     </div>
